@@ -6,7 +6,7 @@ MAINTAINER Chris Mutel <cmutel@gmail.com>
 USER root
 
 # Need mercurial for hg to get test coverage info
-RUN apt-get update && apt-get install mercurial
+RUN apt-get update && apt-get install -y mercurial
 
 USER $NB_USER
 
