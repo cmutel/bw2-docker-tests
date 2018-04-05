@@ -14,9 +14,8 @@ RUN conda install --quiet --yes wheel && \
     conda update --yes pip wheel setuptools
 
 # Install Python 3 packages
-RUN conda install --quiet --yes nomkl pandas matplotlib seaborn scikit-learn cython flask lxml requests nose docopt whoosh xlsxwriter xlrd unidecode psutil && \
-    pip install --user --no-cache-dir eight && \
-    pip install --user --no-cache-dir brightway2 && \
+
+RUN conda install -y -q -c conda-forge -c cmutel -c haasad brightway2 jupyter pytest pytest-cov python-coveralls && \
     conda clean -tipsy
 
 RUN mkdir /home/jovyan/data
