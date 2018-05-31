@@ -14,7 +14,6 @@ RUN conda install --quiet --yes wheel && \
     conda update --yes pip wheel setuptools
 
 # Install Python 3 packages
-
 RUN conda install -y -q -c conda-forge -c cmutel -c haasad brightway2 jupyter pytest pytest-cov python-coveralls && \
     conda clean -tipsy
 
