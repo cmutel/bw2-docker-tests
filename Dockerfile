@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y mercurial
 
 USER $NB_USER
 
+
 RUN conda install --quiet --yes wheel && \
     conda update --yes pip wheel setuptools
 
